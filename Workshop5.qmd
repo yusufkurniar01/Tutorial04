@@ -4,6 +4,12 @@ format: html
 editor: visual
 ---
 
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
 ### Load Library
 
 ```{r}
@@ -11,21 +17,22 @@ library(ggplot2)
 library(palmerpenguins)
 ```
 
-## Referencing Sections
-
-
-## Referencing Figures
+### Subsection 1.1 {#sub-section}
 
 ```{r}
 #| label: fig-bill
 #| fig-cap: "Bill length vs flipper length"
+#| lst-label: lst-penguins-code
+#| lst-cap: "Code to produce penguins plot"
 ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_point()
 ```
 
 Figure @fig-bill shows the relationship between flipper length and bill length.
 
-## Referencing Tables
+## A whole new section
+
+Remember in the @sub-section, @fig-bill showed us the flipper length analysis. Test for @sub-section
 
 ```{r}
 #| label: tbl-summary

@@ -1,0 +1,36 @@
+---
+title: "Workshop 5"
+format: html
+editor: visual
+---
+
+### Load Library
+
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+## Referencing Sections
+
+
+## Referencing Figures
+
+```{r}
+#| label: fig-bill
+#| fig-cap: "Bill length vs flipper length"
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point()
+```
+
+Figure @fig-bill shows the relationship between flipper length and bill length.
+
+## Referencing Tables
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Summary statistics of the penguins dataset"
+knitr::kable(summary(penguins))
+```
+
+See Table @tbl-summary for summary statistics of the dataset.
